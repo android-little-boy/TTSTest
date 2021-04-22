@@ -27,14 +27,14 @@ public class FileUtils {
     /**
      * 把apk从asset目录push到SD卡
      */
-    public void pushFont(Context context, String fileUrl) {
+    public void pushApk(Context context, String fileUrl) {
         File file = new File(fileUrl);
         if (file.exists()) {
-            copyAssetsFileToSDCard(context, fileUrl, context.getExternalFilesDir("").getAbsolutePath() + "/讯飞语音引擎.apk");
+            copyAssetsFileToSDCard(context, fileUrl, context.getExternalFilesDir("").getAbsolutePath() + "/语音引擎.apk");
         } else {
-            File assetsFontBack = new File(context.getExternalFilesDir("").getAbsolutePath() + "/讯飞语音引擎.apk");
+            File assetsFontBack = new File(context.getExternalFilesDir("").getAbsolutePath() + "/语音引擎.apk");
             if (!assetsFontBack.exists()){
-                copyAssetsFileToSDCard(context, "kdxfyyyq_downcc.apk", context.getExternalFilesDir("").getAbsolutePath() + "/讯飞语音引擎.apk");
+                copyAssetsFileToSDCard(context, "kdxfyyyq_downcc.apk", context.getExternalFilesDir("").getAbsolutePath() + "/语音引擎.apk");
             }
         }
     }
